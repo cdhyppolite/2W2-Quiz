@@ -1,0 +1,85 @@
+/* Mise en page des questions du quiz
+============================================================*/
+
+main.quiz {
+    /*Conteneur flex en colonne*/
+    flex-direction: column;
+    /*N'est pas affiché au démarrage*/
+    display: none;
+}
+
+main.quiz>header {
+    /*font-family: 'Train One', cursive;*/
+    font-family: 'Titan One', cursive;
+    font-size: 3rem;
+}
+
+.quiz section {
+    /*Au démarrage on place la section en bas de l'écran*/
+    transform: translateY(100%);
+    opacity: 0;
+    /*Effet de transition*/
+    transition: transform 1s, opacity 1s;
+}
+
+section #titreQuestion {
+    font-size: 1.5rem;
+    width: 90%;
+    margin-top: 1rem;
+    color: #fff;
+}
+
+section #lesChoix {
+    width: 90vw;
+    /*------------*/
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+    flex: 1 1 auto;
+    /*align-items: center;*/
+}
+
+div.choix {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    color: #555555;
+    border: 3px solid #000;
+    transition: 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.choix:hover,
+div.choix:active {
+    cursor: pointer;
+    animation: text-arc-en-ciel 4.5s infinite;
+}
+
+
+/* Ajustement pour les écrans de taille moyenne et plus grande
+=============================================================== */
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 992px) {
+    section #lesChoix {
+        /*Conteneur flex en rangée*/
+        flex-direction: row;
+        justify-content: space-between;
+        /*Étirement comme item flex*/
+        display: flex;
+        flex: 1 1 auto;
+        align-items: center;
+        width: 80%;
+    }
+    div.choix {
+        font-size: 4rem;
+        width: 40vmin;
+        height: 40vmin;
+        padding: 0 5px;
+        line-height: 40vmin;
+    }
+}

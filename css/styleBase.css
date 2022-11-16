@@ -1,0 +1,176 @@
+/* Reset supplémentaire
+============================================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titan One', cursive;
+}
+
+
+/* Mise en page
+============================================================*/
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.875rem;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #e5e5e5;
+    color: whitesmoke;
+    overflow: hidden;
+    /*Image d'arrière-plan*/
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    /*Conteneur flex en rangée*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    min-height: 15vh;
+    text-align: center;
+    border-bottom: 3px solid black;
+    /*Conteneur flex en rangée*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Ne peut rétrécir comme item flex*/
+    flex: 0 0 auto;
+    background-color: white;
+    color: #555555;
+    box-shadow: 2px -7px 50px -2px #000000;
+}
+
+footer {
+    min-height: 10vh;
+    width: 100vw;
+    text-align: center;
+    border-top: 3px solid black;
+    /*Position fixe*/
+    position: fixed;
+    bottom: 0;
+    /*Conteneur flex en rangée*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Ne peut rétrécir comme item flex*/
+    flex: 0 0 auto;
+    background-color: white;
+    color: #555555;
+    box-shadow: 1px 20px 50px -2px #000000;
+    font-size: 2em;
+}
+
+#fin {
+    color: whitesmoke;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+}
+
+h1 {
+    font-size: 1rem;
+}
+
+section {
+    width: 100vw;
+    height: 70vh;
+    font-size: 2rem;
+    text-align: center;
+    /*Conteneur flex colonne*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lettre {
+    font-size: 5rem;
+    padding: 0 1rem;
+    opacity: 0;
+}
+
+
+/*Barre de Progression
+============================================================*/
+
+.barreReponse {
+    height: 1vh;
+    width: 0;
+    background-color: green;
+    position: fixed;
+    bottom: 10vh;
+    transition: 2s;
+}
+
+.barreErreur {
+    height: 1vh;
+    width: 0vw;
+    background-color: crimson;
+    position: fixed;
+    bottom: 10vh;
+    right: 0;
+    transition: 2s;
+    transform-origin: right;
+}
+
+
+/* Rétroaction sur les choix
+============================================================*/
+
+.bonChoix {
+    background-color: green;
+    animation: text-arc-en-ciel 4.5s infinite;
+}
+
+.mauvaisChoix {
+    /*background-color: #ff7676;*/
+    background-color: crimson;
+}
+
+
+/* Ajustement pour les écrans de taille moyenne et plus grande
+=============================================================== */
+
+@media screen and (max-width: 600px) {
+    main.intro {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: #ffb7b7;
+    }
+    .lettre {
+        font-size: 7rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        font-size: 1rem;
+        background-color: #b7c2ff;
+    }
+    .lettre {
+        font-size: 8rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .lettre {
+        font-size: 15rem;
+    }
+}

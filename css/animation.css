@@ -1,0 +1,84 @@
+/* Animation
+============================================================*/
+
+@keyframes animLettre {
+    from {
+        opacity: 0.5;
+        transform: scale(5) rotate(180deg);
+        ;
+        animation-timing-function: cubic-bezier(.42, 0, .37, 1.47)
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.lettre {
+    animation: animLettre 500ms forwards, text-arc-en-ciel 4.5s infinite;
+    /*animation-duration: 4.5s;
+    animation-name: text-arc-en-ciel;
+    animation-iteration-count: infinite;*/
+}
+
+.afficherSection {
+    animation-name: fadeEtMonte;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+b,
+i {
+    animation: text-arc-en-ciel 4.5s infinite;
+}
+
+@keyframes text-arc-en-ciel {
+    100%,
+    0% {
+        color: rgb(255, 0, 0);
+    }
+    8% {
+        color: rgb(255, 127, 0);
+    }
+    16% {
+        color: rgb(255, 255, 0);
+    }
+    25% {
+        color: rgb(127, 255, 0);
+    }
+    33% {
+        color: rgb(0, 255, 0);
+    }
+    41% {
+        color: rgb(0, 255, 127);
+    }
+    50% {
+        color: rgb(0, 255, 255);
+    }
+    58% {
+        color: rgb(0, 127, 255);
+    }
+    66% {
+        color: rgb(0, 0, 255);
+    }
+    75% {
+        color: rgb(127, 0, 255);
+    }
+    83% {
+        color: rgb(255, 0, 255);
+    }
+    91% {
+        color: rgb(255, 0, 127);
+    }
+}
+
+@keyframes fadeEtMonte {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

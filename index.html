@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+
+<head>
+    <title>TP2</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="images/roue1.png" />
+
+    <!-- Ajustement de la taille du viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Polices de caractères utilisées-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+
+    <!-- Polices d'icônes utilisées-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+
+    <!-- Références aux CSS-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styleBase.css">
+    <link rel="stylesheet" href="css/styleQuiz.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/etoile.css">
+    <link rel="stylesheet" href="css/roue.css">
+
+</head>
+
+<body>
+    <main class="intro">
+        <footer>
+            <!--Les lettres utilisés pour l'intro-->
+        </footer>
+    </main>
+
+    <main class="quiz">
+        <header>Rainbow Quiz<br /> Connais-tu Mario Kart?</header>
+        <section>
+            <div id="titreQuestion">Titre de la question</div>
+            <div id="lesChoix"></div>
+        </section>
+    </main>
+
+    <section id="fin">
+        <!-- Affichage des résultats -->
+        <!-- bouton de reprise -->
+    </section>
+
+
+    <div class="etoileAnim"></div>
+
+    <!--Barre de progression-->
+    <div class="barreReponse"></div>
+    <div class="barreErreur"></div>
+    <footer>
+        <!-- Zone de message -->
+        <button>Cliquer ici pour commencer le quiz</button>
+
+
+        <img class="roue gauche" src="./images/roue1.png" alt="">
+        <img class="roue droite" src="./images/roue2.png" alt="">
+    </footer>
+
+    <!-- Chargement des scripts -->
+    <script src="js/questionsQuiz.js"></script>
+    <script src="js/fonctions.js"></script>
+    <script src="js/application.js"></script>
+    <script src="js/etoile.js"></script>
+    <script src="js/roue.js"></script>
+</body>
+
+</html>

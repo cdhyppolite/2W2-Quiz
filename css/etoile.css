@@ -1,0 +1,44 @@
+.etoile {
+    font-size: 3rem;
+    /*border: 1px solid aqua;*/
+    /*Positionnement*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*Transitions pour animer le déplacement*/
+    transition: left 1s ease-out, top 1s ease-out;
+}
+
+@keyframes animEtoile {
+    fromo {
+        transform: scale(0.3) rotate(0deg);
+        opacity: 0.1;
+    }
+    60% {
+        transform: scale(3) rotate(180deg);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.3) rotate(360deg);
+        opacity: 0.1;
+    }
+}
+
+.etoileAnim {
+    color: whitesmoke;
+    /*border: 1px solid aqua;*/
+    /*Positionnement*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*Animation*/
+    animation: animEtoile 1s infinite, text-arc-en-ciel 2s infinite;
+    transform: scale(10);
+    pointer-events: none;
+    z-index: 1;
+    cursor: none;
+}
+
+.etoileAnim::after {
+    content: "\2739";
+}
